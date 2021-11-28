@@ -12,7 +12,7 @@ import javax.inject.Inject;
 import org.eclipse.microprofile.config.ConfigProvider;
 
 @ApplicationScoped
-public class RenameMetric {
+public class StartMetric {
 
   @Inject
   PrometheusMeterRegistry registry;
