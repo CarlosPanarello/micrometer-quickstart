@@ -23,7 +23,7 @@ public class NamingMetric implements NamingConvention {
   }
 
   public String name(String name, Type type, String baseUnit) {
-    System.out.println("Teste-->" + name + " -Type- " + type +" - Base- " + baseUnit);
+    System.out.println("Param--> " + name + " -Type-> " + type +" - Base-> " + baseUnit);
 
     String conventionName = NamingConvention.snakeCase.name(name, type, baseUnit);
     switch(type) {
@@ -38,7 +38,7 @@ public class NamingMetric implements NamingConvention {
     switch(type) {
       case COUNTER:
         if (!conventionName.endsWith("_total") && this.isNotMetricName(conventionName)) {
-          conventionName = conventionName + "_mytotal";
+          conventionName = conventionName + "_total";
         }
       case DISTRIBUTION_SUMMARY:
       case GAUGE:
